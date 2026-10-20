@@ -1,0 +1,51 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AlbionWebSiteApplication",
+            "request": "launch",
+            "mainClass": "com.living.albionWebSite.AlbionWebSiteApplication",
+            "projectName": "AlbionWebGuide"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WebSiteApplication<web-site>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.living.web_site.WebSiteApplication",
+            "projectName": "web-site",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WebSiteApplication<web-site-Сайт обучалка, для дебилчиков>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.living.web_site.WebSiteApplication",
+            "projectName": "web-site-Сайт обучалка, для дебилчиков",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WebSiteApplication<web-site-web-siteGuide>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.living.web_site.WebSiteApplication",
+            "projectName": "web-site-web-siteGuide",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WebSiteApplication<AlbionWebGuide>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.living.web_site.WebSiteApplication",
+            "projectName": "AlbionWebGuide",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

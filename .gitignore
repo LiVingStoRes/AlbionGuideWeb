@@ -1,0 +1,17 @@
+# Сборщики (Maven / Gradle)
+target/
+build/
+.gradle/
+bin/
+out/
+
+# Настройки сред разработки
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+
+# Логи и системные файлы
+*.log
+.DS_Store

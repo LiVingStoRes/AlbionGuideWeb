@@ -1,0 +1,343 @@
+body.light-theme {
+    /* Фоновые цвета */
+    --color-bg-main: #f5f5f5;       /* Светло-серый фон страницы */
+    --color-bg-header: rgba(240, 240, 240, 0.8); /* Полупрозрачная светлая шапка */
+    --color-bg-aside: #ffffff;      /* Белая боковая панель */
+    --color-bg-input: #ffffff;      /* Белый фон инпута */
+
+    /* Текст */
+    --color-text-code: #17395f;
+    --color-text-main: #222222;      /* Темно-серый текст вместо белого */
+    --color-text-bright: #000000;    /* Черный для активных ссылок */
+    --color-text-search: #555;
+
+    /* Границы */
+    --color-border: #dddddd;        /* Светлые границы */
+    --color-border-light: rgba(0, 0, 0, 0.1); 
+    --color-input-border: #cccccc;
+
+    /* Фирменный зеленый можно оставить прежним или сделать чуть контрастнее */
+    --color-primary: #632e7d;       /* Более глубокий зеленый для лучшей читаемости на белом */
+    --color-primary-hover: #491b5e;
+    --color-active-border: #642e7d;
+}
+
+
+:root {
+    /* Фоновые цвета */
+    --color-bg-main: #333333;       /* Основной фон страниц */
+    --color-bg-header: rgba(59, 59, 59, 0.4); /* Полупрозрачный фон шапки */
+    --color-bg-aside: #3b3b3b;      /* Фон боковой панели */
+    --color-bg-input: #222222;      /* Фон инпутов и границ */
+
+    /* Фирменный зеленый цвет и его оттенки */
+    --color-primary: #8e40ba;       /* Основной зеленый (кнопки, ссылки) */
+    --color-primary-hover: #6e2d9a; /* Зеленый при наведении / номера */
+    --color-active-border: #9517cf; /* Линия подчеркивания активной вкладки */
+
+    /* Цвета текста */
+    --color-text-code: #75a8e3;
+    --color-text-main: whitesmoke;  /* Основной светлый текст */
+    --color-text-bright: #ffffff;   /* Ярко-белый текст для активных элементов */
+
+    /* Границы */
+    --color-border: #222222;        /* Темные границы */
+    --color-border-light: rgba(255, 255, 255, 0.1); /* Светлая прозрачная граница шапки */
+    --color-input-border: #555555;  /* Граница поля поиска */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-main);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 999;
+    
+    background-color: var(--color-bg-header);
+    border-bottom: 1px solid var( --color-border-light);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 40px; 
+    box-sizing: border-box;
+}
+
+
+.header-logo {
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    margin-left: 80px;
+}
+.header-container {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 40px;
+    
+}
+
+.header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.horizont-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 100px;
+    gap: 120px;
+}
+
+.horizont-list a {
+    font-size: 25px;
+    text-decoration: none;
+    color:var(--color-text-main);
+    white-space: nowrap;
+}
+
+.side-list {
+    list-style: none;
+    color: var(--color-primary);
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    margin-top: 5%;
+    flex: 1;
+    margin-right: 20%;
+    align-items: stretch;
+}
+
+main {
+    flex: 1;
+    padding: 20px 80px;
+    background-color: var(--color-bg-main);
+}
+
+aside {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto; 
+    width: 320px;
+    padding: 20px;
+    z-index: 990;
+    background-color: var(--color-bg-aside);
+    border-left: 1px solid var(--color-bg-input);
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-bg-main);
+}
+.vertical-list {
+    display:grid;
+    gap: 10px;
+}
+
+h1, p, h3 {
+    color: var(--color-text-main);
+}
+.numbers {
+    color: var(--color-primary-hover);
+}
+.logo-side img {
+    padding: 4px;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.theme-switch button {
+    background: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 30px;
+    font-size: 14px;
+}
+.theme-switch button:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+.search-container {
+    display: flex;
+    flex-grow: 1;
+    max-width: 400px;
+}
+.search-container input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--color-text-search);
+    background-color: var(--color-text-main);
+    color: white;
+}
+.search-container button {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.horizont-list a.active {
+    border-bottom: 2px solid var(--color-active-border);
+    padding-bottom: 5px;
+    color: var(--color-text-bright);
+    font-weight: bold;
+}
+
+/* --- ПОДВАЛ САЙТА (FOOTER) --- */
+.main-footer {
+    background-color: var(--color-bg-aside);
+    border-top: 1px solid var(--color-border);
+    padding: 40px 0 20px 0;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 320px; 
+}
+
+/* Сетка в 3 колонки */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    color: var(--color-text-bright);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 35px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.footer-text {
+    color: var(--color-text-main);
+    font-size: 14px !important;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding: 20px 40px 0 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777777;
+    font-size: 13px !important;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .main-footer {
+        padding-right: 0;
+    }
+}
+
+.code-brd {
+    margin-left: 5%;
+    margin-right: 20%;
+    width: 1000px;
+    background-color: var(--color-bg-input);
+    border: 1px solid var(--color-active-border);
+    border-radius: 10px;
+}
+.code-brd-bottom {
+    margin: 0;
+    padding: 0px 5px;
+    border-bottom: 1px solid var(--color-active-border);
+}
+.code {
+    padding: 2px 15px;
+    font-size: 15px;
+    color: var(--color-text-code);
+
+}
+
+video {
+    margin-left: 5%;
+}

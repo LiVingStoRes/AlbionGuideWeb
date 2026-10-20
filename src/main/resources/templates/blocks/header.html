@@ -1,0 +1,29 @@
+<header th:fragment="header">
+    
+    <div class="header-logo"> 
+        <a href="#" class="logo-side">
+            <img th:src="@{/images/logo.png}" width="120" alt="Logo">
+        </a>
+    </div>
+
+    <nav class="header-nav">
+        <ul class="horizont-list">
+            <li><a th:href="@{/home}" th:classappend="${activeTab == 'home'} ? 'active'">Базовые штуки</a></li>
+            <li><a th:href="@{/springBoot}" th:classappend="${activeTab == 'springBoot'} ? 'active'">ДД</a></li>
+            <li><a th:href="@{/springWeb}" th:classappend="${activeTab == 'springWeb'} ? 'active'">Хил</a></li>
+            <li><a th:href="@{/springDoc}" th:classappend="${activeTab == 'springDoc'} ? 'active'">Танк</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-right">
+        <div class="theme-switch">
+            <button>🌙 Темная</button> 
+        </div>
+        
+        <form class="search-container">
+            <input type="text" placeholder="Поиск по документации...">
+            <button type="submit">Найти</button>
+        </form>
+    </div>
+
+</header>

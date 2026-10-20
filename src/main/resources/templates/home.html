@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Main page</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+    <header class="main-header" th:insert="~{blocks/header :: header(activeTab='home')}" ></header>
+
+    <div class="main-container">
+        <main>
+            <h1 id="base">Базовые штуки</h1>
+            
+            <video controls width="960" height="560" class="">
+                <source th:src="@{/videos/}" type="video/mp4">
+                Ваш браузер не поддерживает тег video.
+           </video>
+
+           <h1 id="definitions">Определения</h1>
+            
+            <video controls width="960" height="560" class="">
+                <source th:src="@{/videos/}" type="video/mp4">
+                Ваш браузер не поддерживает тег video.
+           </video>
+
+           <h1 id="PvE">PVE</h1>
+            
+            <video controls width="960" height="560" class="">
+                <source th:src="@{/videos/}" type="video/mp4">
+                Ваш браузер не поддерживает тег video.
+           </video>
+
+           <h1 id="PvP">PVP</h1>
+            
+            <video controls width="960" height="560" class="">
+                <source th:src="@{/videos/}" type="video/mp4">
+                Ваш браузер не поддерживает тег video.
+           </video>
+        </main>
+        <aside>
+            <h3>Важные места</h3>
+            <ul class="vertical-list">
+                <li class="side-list"><a href="#base" class="side-list"><span class="numbers">1.</span> База</a></li>
+                <li class="side-list"><a href="#definitions" class="side-list"><span class="numbers">2.</span> Определения</a></li>
+                <li class="side-list"><a href="#PvE" class="side-list"><span class="numbers">3.</span> PvE</a></li>
+                <li class="side-list"><a href="#PvP" class="side-list"><span class="numbers">4.</span> PvP</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
